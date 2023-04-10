@@ -1,0 +1,1 @@
+uvicorn fly_litestar_example.app.main:app --reload --port 8000

@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "fly-litestar-example"
+version = "0.1.0"
+description = ""
+authors = ["Brian Li <brian@brianli.com>"]
+readme = "README.md"
+packages = [{include = "fly_litestar_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+litestar = "^2.0.0a3"
+uvicorn = "^0.21.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
