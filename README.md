@@ -2,7 +2,7 @@
 
 ## fly-litestar-example
 
-This example demonstrates how to configure a Litestar API for Fly.io's Machines platform. Fly Machines automatically respond and wake up to incoming requests, and shut down (scale to zero) when the host application exits. This model is ideal for stateless FaaS (function-as-a-service) use cases that would benefit from putting VMs to sleep when they're not active.
+Based on [Josef Rousek's FastAPI example](https://blog.rousek.name/2022/07/06/faas-on-fly-io-with-fastapi/), this example demonstrates how to configure a "scale to zero" Litestar API for Fly.io's Machines platform. Fly Machines automatically respond and wake up to incoming requests, and shut down when the host application exits. This model is ideal for stateless FaaS (function-as-a-service) use cases that would benefit from putting VMs to sleep when they're not active.
 
 This example uses the Litestar features below to implement "scale to zero".
 
