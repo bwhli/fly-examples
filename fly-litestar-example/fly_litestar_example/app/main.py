@@ -17,7 +17,7 @@ class MachineOverlord:
 
     async def start(self):
         print("Starting Machine Overlord...")
-        self.last_request_timestamp = self.update_last_request_timestamp()
+        self.last_request_timestamp = time()
         while True:
             await asyncio.sleep(SHUTDOWN_TIMEOUT)
             # Send shutdown signal if no requests have been made in the last SHUTDOWN_TIMEOUT seconds.
