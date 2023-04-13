@@ -42,7 +42,14 @@ async def before_request_handler(request: Request) -> None:
 
 @get("/")
 async def get_home() -> dict[str, str]:
-    return {"status": "success"}
+    return {
+        "status": "success",
+        "data": {
+            "fly_alloc_id": os.getenv("FLY_ALLOC_ID"),
+            "fly_app_name": os.getenv("FLY_APP_NAME"),
+            "fly_region": os.getenv("FLY_REGION"),
+        },
+    }
 
 
 app = Litestar(

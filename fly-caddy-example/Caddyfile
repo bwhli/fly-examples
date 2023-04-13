@@ -1,0 +1,3 @@
+http://fly-caddy-example.fly.dev {
+    reverse_proxy http://fly-litestar-example.flycast
+}
