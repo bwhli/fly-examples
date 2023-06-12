@@ -1,25 +1,14 @@
-# fly.toml file generated for fly-litestar-example on 2023-04-10T16:11:16+09:00
+# fly.toml app configuration file generated for fly-litestar-example on 2023-06-12T16:57:26+09:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
 app = "fly-litestar-example"
-kill_signal = "SIGINT"
-kill_timeout = 5
-mounts = []
 primary_region = "nrt"
-processes = []
 
-[[services]]
+[http_service]
   internal_port = 8080
-  processes = ["app"]
-  protocol = "tcp"
-  [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
-    type = "connections"
-
-  [[services.ports]]
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
